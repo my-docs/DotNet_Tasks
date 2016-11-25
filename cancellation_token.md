@@ -1,8 +1,8 @@
 CancellationToken
 ====
 
-
-
+CancellationToken은 실행중인 작업(혹은 실행 대기중인)을 취소시키는 인터페이스를 제공합니다.<br>
+<br>
 예를 들어<br>
 아래 코드는 취소 토큰을 이용하여 1초의 타임아웃을 가지는 `HTTP` 요청을 수행합니다.
 ```cs
