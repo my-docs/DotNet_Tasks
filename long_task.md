@@ -19,12 +19,16 @@ Task HeavyJinwoo() {
 }
 ```
 
-
+반면, 아래와 같이 CPU 자원을 오래 사용하지는 않지만 태스크 자체가 오래동안 실행되어야 하는 경우에 적합합니다.
 ```cs
 Task SlowJinwoo() {
     return Task.Run(() => {
+        while(true) {
+            var hasChanges = HttpPolling();
 
-        
+            if (hasChanges)
+                return;
+        }
     });
 }
 ```
